@@ -1,7 +1,11 @@
 <template>
   <p v-if="articlesStore.isLoading">Loading...</p>
   <div class="articles-list">
-    <ArticleItem v-for="article in articlesStore.articles" :key="article.id" :article="article" />
+    <ArticleItem
+      v-for="article in articlesStore.filteredArticles"
+      :key="article.id"
+      :article="article"
+    />
   </div>
 </template>
 

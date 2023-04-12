@@ -56,5 +56,15 @@ export const useArticlesStore = defineStore('articles', {
         this.isLoading = false
       }
     }
+  },
+
+  getters: {
+    filteredArticles(): Article[] {
+      if (this.filter === 'ALL') {
+        return this.articles
+      }
+
+      return this.articles.filter((article) => article.tag === this.filter)
+    }
   }
 })

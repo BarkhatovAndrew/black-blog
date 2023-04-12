@@ -65,11 +65,6 @@ const color = computed(() => tagColorMap[articlesStore.currentArticle?.tag as Ta
   width: 600px;
 }
 
-.text {
-  width: 60%;
-  margin: 40px auto;
-}
-
 .tag {
   margin-right: 10px;
 }

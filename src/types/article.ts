@@ -7,3 +7,5 @@ export interface Article {
 }
 
 export type TagType = 'HTML' | 'CSS' | 'JS'
+
+export type Filter = 'ALL' | 'CSS' | 'HTML' | 'JS' | 'TUTORIAL' | 'SEARCH'

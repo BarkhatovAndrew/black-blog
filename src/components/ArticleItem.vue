@@ -19,7 +19,7 @@ interface ArticleItemProps {
 
 const props = defineProps<ArticleItemProps>()
 
-const color = computed(() => tagColorMap[props.article.tag! as TagType])
+const color = computed(() => tagColorMap[props.article.tag as TagType])
 </script>
 
 <style scoped>
@@ -33,7 +33,7 @@ const color = computed(() => tagColorMap[props.article.tag! as TagType])
   align-items: center;
   justify-content: center;
   padding: 30px;
-  transition: scale 150ms;
+  transition: scale 100ms;
 }
 
 .article-item:hover {

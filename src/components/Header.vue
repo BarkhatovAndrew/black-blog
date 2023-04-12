@@ -7,12 +7,12 @@
     </div>
     <nav>
       <ul class="nav-list">
-        <li>All posts</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Tutorials</li>
-        <li>Search</li>
+        <li class="menu-item active">All posts</li>
+        <li class="menu-item">HTML</li>
+        <li class="menu-item">CSS</li>
+        <li class="menu-item">JavaScript</li>
+        <li class="menu-item">Tutorials</li>
+        <li class="menu-item">Search</li>
       </ul>
     </nav>
   </header>
@@ -26,17 +26,18 @@
   justify-content: space-between;
   padding: 50px 0;
   align-items: center;
+  height: 330px;
 }
 
 .header-img {
-  width: 200px;
-  height: 200px;
+  height: 100%;
 }
 
 .header-title {
   width: 300px;
-  font-size: 60px;
+  font-size: 82px;
   margin: 0;
+  text-shadow: 2px 0 0 #ce5937, 0 2px 0 #5599d4, 0 -2px 0 #c4ad51;
 }
 
 .header-subtitle {
@@ -58,5 +59,20 @@
   padding-left: 0;
   list-style: none;
   line-height: 36px;
+}
+
+.menu-item {
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background: var(--bg-color-inverted);
+  color: var(--text-color-inverted);
+}
+
+.active {
+  cursor: default;
+  background: var(--bg-color-inverted);
+  color: var(--text-color-inverted);
 }
 </style>

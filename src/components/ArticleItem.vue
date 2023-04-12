@@ -24,6 +24,7 @@ const color = computed(() => tagColorMap[props.article.tag! as TagType])
 
 <style scoped>
 .article-item {
+  cursor: pointer;
   position: relative;
   border: 1px solid var(--border-article-color);
   width: 298px;
@@ -32,6 +33,13 @@ const color = computed(() => tagColorMap[props.article.tag! as TagType])
   align-items: center;
   justify-content: center;
   padding: 30px;
+  transition: scale 150ms;
+}
+
+.article-item:hover {
+  scale: 1.02;
+  z-index: 1;
+  background: var(--bg-color);
 }
 
 .info {

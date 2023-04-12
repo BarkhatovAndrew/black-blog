@@ -22,49 +22,465 @@
       "id": 1,
       "tagId": 2,
       "createdAt": "August, 18",
-      "title": "Animating Link Underlines"
+      "title": "Animating Link Underlines",
+      "blocks": [
+        {
+          "id": 1,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 3,
+          "type": "image",
+          "src": "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 2,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        },
+        {
+          "id": 5,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 4,
+          "type": "text",
+          "title": "So what can it really do?",
+          "text": "The core client-side JavaScript language consists of some common programming features that allow you to do things like:\n\n    Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called name.\n    Operations on pieces of text (known as \"strings\" in programming). In the above example we take the string \"Player 1: \" and join it to the name variable to create the complete text label, e.g. \"Player 1: Chris\".\n    Running code in response to certain events occurring on a web page. We used a click event in our example above to detect when the label is clicked and then run the code that updates the text label.\n    And much more!\n\nWhat is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called Application Programming Interfaces (APIs) provide you with extra superpowers to use in your JavaScript code.\n\nAPIs are ready-made sets of code building blocks that allow a developer to implement programs that would otherwise be hard or impossible to implement. They do the same thing for programming that ready-made furniture kits do for home building — it is much easier to take ready-cut panels and screw them together to make a bookshelf than it is to work out the design yourself, go and find the correct wood, cut all the panels to the right size and shape, find the correct-sized screws, and then put them together to make a bookshelf."
+        },
+        {
+          "id": 7,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 6,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 8,
+          "type": "image",
+          "src": "https://i.pinimg.com/originals/26/cd/2e/26cd2e5082f1aeb9e8afc52f6a6c7e2e.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 9,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        }
+      ]
     },
     {
       "id": 2,
       "tagId": 2,
       "createdAt": "August, 3",
-      "title": "Breaking to a new row with flexbox"
+      "title": "Breaking to a new row with flexbox",
+      "blocks": [
+        {
+          "id": 1,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 3,
+          "type": "image",
+          "src": "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 2,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        },
+        {
+          "id": 5,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 4,
+          "type": "text",
+          "title": "So what can it really do?",
+          "text": "The core client-side JavaScript language consists of some common programming features that allow you to do things like:\n\n    Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called name.\n    Operations on pieces of text (known as \"strings\" in programming). In the above example we take the string \"Player 1: \" and join it to the name variable to create the complete text label, e.g. \"Player 1: Chris\".\n    Running code in response to certain events occurring on a web page. We used a click event in our example above to detect when the label is clicked and then run the code that updates the text label.\n    And much more!\n\nWhat is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called Application Programming Interfaces (APIs) provide you with extra superpowers to use in your JavaScript code.\n\nAPIs are ready-made sets of code building blocks that allow a developer to implement programs that would otherwise be hard or impossible to implement. They do the same thing for programming that ready-made furniture kits do for home building — it is much easier to take ready-cut panels and screw them together to make a bookshelf than it is to work out the design yourself, go and find the correct wood, cut all the panels to the right size and shape, find the correct-sized screws, and then put them together to make a bookshelf."
+        },
+        {
+          "id": 7,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 6,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 8,
+          "type": "image",
+          "src": "https://i.pinimg.com/originals/26/cd/2e/26cd2e5082f1aeb9e8afc52f6a6c7e2e.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 9,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        }
+      ]
     },
     {
       "id": 3,
       "tagId": 3,
       "createdAt": "June, 29",
-      "title": "Set video playback speed with JavaScript"
+      "title": "Set video playback speed with JavaScript",
+       "blocks": [
+        {
+          "id": 1,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 3,
+          "type": "image",
+          "src": "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 2,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        },
+        {
+          "id": 5,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 4,
+          "type": "text",
+          "title": "So what can it really do?",
+          "text": "The core client-side JavaScript language consists of some common programming features that allow you to do things like:\n\n    Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called name.\n    Operations on pieces of text (known as \"strings\" in programming). In the above example we take the string \"Player 1: \" and join it to the name variable to create the complete text label, e.g. \"Player 1: Chris\".\n    Running code in response to certain events occurring on a web page. We used a click event in our example above to detect when the label is clicked and then run the code that updates the text label.\n    And much more!\n\nWhat is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called Application Programming Interfaces (APIs) provide you with extra superpowers to use in your JavaScript code.\n\nAPIs are ready-made sets of code building blocks that allow a developer to implement programs that would otherwise be hard or impossible to implement. They do the same thing for programming that ready-made furniture kits do for home building — it is much easier to take ready-cut panels and screw them together to make a bookshelf than it is to work out the design yourself, go and find the correct wood, cut all the panels to the right size and shape, find the correct-sized screws, and then put them together to make a bookshelf."
+        },
+        {
+          "id": 7,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 6,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 8,
+          "type": "image",
+          "src": "https://i.pinimg.com/originals/26/cd/2e/26cd2e5082f1aeb9e8afc52f6a6c7e2e.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 9,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        }
+      ]
     },
     {
       "id": 4,
       "tagId": 1,
       "createdAt": "August, 3",
-      "title": "Breaking to a new row with flexbox"
+      "title": "Breaking to a new row with flexbox",
+       "blocks": [
+        {
+          "id": 1,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 3,
+          "type": "image",
+          "src": "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 2,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        },
+        {
+          "id": 5,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 4,
+          "type": "text",
+          "title": "So what can it really do?",
+          "text": "The core client-side JavaScript language consists of some common programming features that allow you to do things like:\n\n    Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called name.\n    Operations on pieces of text (known as \"strings\" in programming). In the above example we take the string \"Player 1: \" and join it to the name variable to create the complete text label, e.g. \"Player 1: Chris\".\n    Running code in response to certain events occurring on a web page. We used a click event in our example above to detect when the label is clicked and then run the code that updates the text label.\n    And much more!\n\nWhat is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called Application Programming Interfaces (APIs) provide you with extra superpowers to use in your JavaScript code.\n\nAPIs are ready-made sets of code building blocks that allow a developer to implement programs that would otherwise be hard or impossible to implement. They do the same thing for programming that ready-made furniture kits do for home building — it is much easier to take ready-cut panels and screw them together to make a bookshelf than it is to work out the design yourself, go and find the correct wood, cut all the panels to the right size and shape, find the correct-sized screws, and then put them together to make a bookshelf."
+        },
+        {
+          "id": 7,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 6,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 8,
+          "type": "image",
+          "src": "https://i.pinimg.com/originals/26/cd/2e/26cd2e5082f1aeb9e8afc52f6a6c7e2e.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 9,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        }
+      ]
     },
     {
       "id": 5,
       "tagId": 1,
       "createdAt": "May, 1",
-      "title": "Animating Link Underlines"
+      "title": "Animating Link Underlines",
+       "blocks": [
+        {
+          "id": 1,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 3,
+          "type": "image",
+          "src": "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 2,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        },
+        {
+          "id": 5,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 4,
+          "type": "text",
+          "title": "So what can it really do?",
+          "text": "The core client-side JavaScript language consists of some common programming features that allow you to do things like:\n\n    Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called name.\n    Operations on pieces of text (known as \"strings\" in programming). In the above example we take the string \"Player 1: \" and join it to the name variable to create the complete text label, e.g. \"Player 1: Chris\".\n    Running code in response to certain events occurring on a web page. We used a click event in our example above to detect when the label is clicked and then run the code that updates the text label.\n    And much more!\n\nWhat is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called Application Programming Interfaces (APIs) provide you with extra superpowers to use in your JavaScript code.\n\nAPIs are ready-made sets of code building blocks that allow a developer to implement programs that would otherwise be hard or impossible to implement. They do the same thing for programming that ready-made furniture kits do for home building — it is much easier to take ready-cut panels and screw them together to make a bookshelf than it is to work out the design yourself, go and find the correct wood, cut all the panels to the right size and shape, find the correct-sized screws, and then put them together to make a bookshelf."
+        },
+        {
+          "id": 7,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 6,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 8,
+          "type": "image",
+          "src": "https://i.pinimg.com/originals/26/cd/2e/26cd2e5082f1aeb9e8afc52f6a6c7e2e.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 9,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        }
+      ]
     },
     {
       "id": 6,
       "tagId": 2,
       "createdAt": "April, 20",
-      "title": "Breaking to a new row with flexbox"
+      "title": "Breaking to a new row with flexbox",
+       "blocks": [
+        {
+          "id": 1,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 3,
+          "type": "image",
+          "src": "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 2,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        },
+        {
+          "id": 5,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 4,
+          "type": "text",
+          "title": "So what can it really do?",
+          "text": "The core client-side JavaScript language consists of some common programming features that allow you to do things like:\n\n    Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called name.\n    Operations on pieces of text (known as \"strings\" in programming). In the above example we take the string \"Player 1: \" and join it to the name variable to create the complete text label, e.g. \"Player 1: Chris\".\n    Running code in response to certain events occurring on a web page. We used a click event in our example above to detect when the label is clicked and then run the code that updates the text label.\n    And much more!\n\nWhat is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called Application Programming Interfaces (APIs) provide you with extra superpowers to use in your JavaScript code.\n\nAPIs are ready-made sets of code building blocks that allow a developer to implement programs that would otherwise be hard or impossible to implement. They do the same thing for programming that ready-made furniture kits do for home building — it is much easier to take ready-cut panels and screw them together to make a bookshelf than it is to work out the design yourself, go and find the correct wood, cut all the panels to the right size and shape, find the correct-sized screws, and then put them together to make a bookshelf."
+        },
+        {
+          "id": 7,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 6,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 8,
+          "type": "image",
+          "src": "https://i.pinimg.com/originals/26/cd/2e/26cd2e5082f1aeb9e8afc52f6a6c7e2e.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 9,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        }
+      ]
     },
     {
       "id": 7,
       "tagId": 3,
       "createdAt": "April, 12",
-      "title": "Set video playback speed with JavaScript"
+      "title": "Set video playback speed with JavaScript",
+       "blocks": [
+        {
+          "id": 1,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 3,
+          "type": "image",
+          "src": "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 2,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        },
+        {
+          "id": 5,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 4,
+          "type": "text",
+          "title": "So what can it really do?",
+          "text": "The core client-side JavaScript language consists of some common programming features that allow you to do things like:\n\n    Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called name.\n    Operations on pieces of text (known as \"strings\" in programming). In the above example we take the string \"Player 1: \" and join it to the name variable to create the complete text label, e.g. \"Player 1: Chris\".\n    Running code in response to certain events occurring on a web page. We used a click event in our example above to detect when the label is clicked and then run the code that updates the text label.\n    And much more!\n\nWhat is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called Application Programming Interfaces (APIs) provide you with extra superpowers to use in your JavaScript code.\n\nAPIs are ready-made sets of code building blocks that allow a developer to implement programs that would otherwise be hard or impossible to implement. They do the same thing for programming that ready-made furniture kits do for home building — it is much easier to take ready-cut panels and screw them together to make a bookshelf than it is to work out the design yourself, go and find the correct wood, cut all the panels to the right size and shape, find the correct-sized screws, and then put them together to make a bookshelf."
+        },
+        {
+          "id": 7,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 6,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 8,
+          "type": "image",
+          "src": "https://i.pinimg.com/originals/26/cd/2e/26cd2e5082f1aeb9e8afc52f6a6c7e2e.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 9,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        }
+      ]
     },
     {
       "id": 8,
       "tagId": 3,
       "createdAt": "April, 9",
-      "title": "Breaking to a new row with flexbox"
+      "title": "Breaking to a new row with flexbox",
+       "blocks": [
+        {
+          "id": 1,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 3,
+          "type": "image",
+          "src": "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 2,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        },
+        {
+          "id": 5,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 4,
+          "type": "text",
+          "title": "So what can it really do?",
+          "text": "The core client-side JavaScript language consists of some common programming features that allow you to do things like:\n\n    Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called name.\n    Operations on pieces of text (known as \"strings\" in programming). In the above example we take the string \"Player 1: \" and join it to the name variable to create the complete text label, e.g. \"Player 1: Chris\".\n    Running code in response to certain events occurring on a web page. We used a click event in our example above to detect when the label is clicked and then run the code that updates the text label.\n    And much more!\n\nWhat is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called Application Programming Interfaces (APIs) provide you with extra superpowers to use in your JavaScript code.\n\nAPIs are ready-made sets of code building blocks that allow a developer to implement programs that would otherwise be hard or impossible to implement. They do the same thing for programming that ready-made furniture kits do for home building — it is much easier to take ready-cut panels and screw them together to make a bookshelf than it is to work out the design yourself, go and find the correct wood, cut all the panels to the right size and shape, find the correct-sized screws, and then put them together to make a bookshelf."
+        },
+        {
+          "id": 7,
+          "type": "code",
+          "code": "const para = document.querySelector(\"p\");\n\npara.addEventListener(\"click\", updateName);\n\nfunction updateName() {\n  const name = prompt(\"Enter a new name\");\n  para.textContent = `Player 1: ${name}`;\n}"
+        },
+        {
+          "id": 6,
+          "type": "text",
+          "text": "Welcome to the MDN beginner's JavaScript course! In this article we will look at JavaScript from a high level, answering questions such as \"What is it?\" and \"What can you do with it?\", and making sure you are comfortable with JavaScript's purpose. "
+        },
+        {
+          "id": 8,
+          "type": "image",
+          "src": "https://i.pinimg.com/originals/26/cd/2e/26cd2e5082f1aeb9e8afc52f6a6c7e2e.jpg",
+          "capture": "Javascript logo"
+        },
+        {
+          "id": 9,
+          "type": "text",
+          "title": "A high-level definition",
+          "text": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
+        }
+      ]
     }
   ]
 }

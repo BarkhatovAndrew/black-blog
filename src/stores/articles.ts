@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import type { Article, Filter, TagType } from '@/types/article'
 import { axiosInstance } from '@/utils/axios'
+import type { Article, Filter, TagType } from '@/types/article'
 
 interface Tag {
   id: number
@@ -9,6 +9,7 @@ interface Tag {
 
 interface ArticlesStoreState {
   articles: Article[]
+  currentArticle?: Article
   filter: Filter
   isLoading: boolean
   error?: string
@@ -18,6 +19,7 @@ export const useArticlesStore = defineStore('articles', {
   state: (): ArticlesStoreState => ({
     articles: [],
     filter: 'ALL',
+    currentArticle: undefined,
     error: undefined,
     isLoading: false
   }),
@@ -47,9 +49,26 @@ export const useArticlesStore = defineStore('articles', {
             id: article.id,
             createdAt: article.createdAt,
             title: article.title,
+            blocks: article.blocks,
             tag: tag?.title
           }
         })
+      } catch (e) {
+        this.error = (e as Error).message
+      } finally {
+        this.isLoading = false
+      }
+    },
+
+    async getArticleById(id: number) {
+      this.isLoading = true
+      this.error = undefined
+
+      try {
+        const articleResponse = await axiosInstance.get<Article>('/articles/' + id)
+        this.currentArticle = articleResponse.data
+        const tagResponse = await axiosInstance.get<Tag>('/tags/' + this.currentArticle.tagId)
+        this.currentArticle.tag = tagResponse.data.title
       } catch (e) {
         this.error = (e as Error).message
       } finally {

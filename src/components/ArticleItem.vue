@@ -1,11 +1,11 @@
 <template>
-  <div class="article-item">
+  <RouterLink :to="/article/ + props.article.id" class="article-item">
     <div class="info">
       <p :style="{ color }" class="tag">{{ props.article.tag }}</p>
       <p class="date">{{ props.article.createdAt }}</p>
     </div>
     <p class="title">{{ props.article.title }}</p>
-  </div>
+  </RouterLink>
 </template>
 
 <script setup lang="ts">
@@ -26,7 +26,8 @@ const color = computed(() => tagColorMap[props.article.tag as TagType])
 .article-item {
   cursor: pointer;
   position: relative;
-  border: 1px solid var(--border-article-color);
+  border: 0.5px solid var(--border-article-color);
+  outline: 0.5px solid var(--border-article-color);
   width: 298px;
   height: 298px;
   display: flex;

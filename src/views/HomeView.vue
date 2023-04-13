@@ -2,8 +2,9 @@
   <Header />
   <SearchBar
     placeholder="Search..."
-    :on-input="fetchArticlesSearch"
-    :show="articlesStore.showSearchBar"
+    v-show="articlesStore.showSearchBar"
+    :on-input="debounceInitArticlesSearch"
+    :on-close="closeSearchBar"
   />
   <ArticlesList />
 </template>
@@ -17,8 +18,23 @@ import { debounce } from '@/utils/debounce'
 
 const articlesStore = useArticlesStore()
 
-const fetchArticlesSearch = debounce((value: string) => {
+const debounceInitArticlesSearch = debounce((value: string) => {
   articlesStore.setSearch(value)
   articlesStore.getArticles()
 })
+
+const closeSearchBar = () => {
+  articlesStore.setShowSearchBar(false)
+}
 </script>
+
+<style>
+.v-enter-active {
+  transition: 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  transform: translateY(-40px);
+}
+</style>

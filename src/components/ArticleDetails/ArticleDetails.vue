@@ -35,7 +35,7 @@ import type { TagType } from '@/types/article'
 import ArticleTextBlock from './ArticleTextBlock.vue'
 import ArticleCodeBlock from './ArticleCodeBlock.vue'
 import ArticleImageBlock from './ArticleImageBlock.vue'
-import ArticleDetailsSkeleton from '@/components/ArticleDetails/ArticleDetailsSkeleton.vue'
+import ArticleDetailsSkeleton from './ArticleDetailsSkeleton.vue'
 
 const route = useRoute()
 const articlesStore = useArticlesStore()
@@ -97,6 +97,6 @@ onMounted(() => {
   position: absolute;
   top: 8px;
   left: 0;
-  transition: 1000ms;
+  transition: 600ms ease;
 }
 </style>

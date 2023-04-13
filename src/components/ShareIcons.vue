@@ -23,7 +23,7 @@ import LinkedInIcon from '@/assets/icons/linkedin.svg'
 .icon {
   cursor: pointer;
   width: 30px;
-  fill: #999;
+  fill: var(--share-icons-color);
   transition: 100ms;
   margin-bottom: 5px;
 }

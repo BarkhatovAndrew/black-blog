@@ -1,36 +1,35 @@
 <template>
-  <div class="input-wrapper" v-if="state.show">
-    <input
-      class="search-bar"
-      :type="type"
-      :placeholder="placeholder"
-      @input="onInput(state.value)"
-      v-model="state.value"
-    />
-    <CloseIcon @click="state.show = false" />
-  </div>
+  <Transition>
+    <div class="input-wrapper">
+      <input
+        class="search-bar"
+        v-model="state.value"
+        :type="type"
+        :placeholder="placeholder"
+        @input="onInput?.(state.value)"
+      />
+      <CloseIcon v-if="onClose" @click="onClose" />
+    </div>
+  </Transition>
 </template>
 
 <script setup lang="ts">
 import { reactive } from 'vue'
 import CloseIcon from '@/components/CloseIcon.vue'
 
-// TODO: extend Input
 interface SearchBarProps {
-  show?: boolean
   type?: string
-  placeholder: string
-  onInput: (...args: any[]) => void
+  placeholder?: string
+  onInput?: (...args: any[]) => void
+  onClose?: () => void
 }
 
-const props = withDefaults(defineProps<SearchBarProps>(), {
-  show: true,
-  input: 'text'
+withDefaults(defineProps<SearchBarProps>(), {
+  type: 'text'
 })
 
 const state = reactive({
-  value: '',
-  show: props.show
+  value: ''
 })
 </script>
 

@@ -1,24 +1,25 @@
 <template>
-  <nav role="navigation" :class="{ inverted }">
+  <nav role="navigation" :class="state.isInverted">
     <ul class="nav-list">
       <li
-        v-for="navLink in navLinks"
-        :key="navLink.id"
         class="nav-link"
-        :class="{ active: articlesStore.filter === navLink.value }"
+        v-for="navLink in navLinks"
+        :class="state.isActive(navLink)"
+        :key="navLink.id"
         @click="setFilter(navLink.value)"
       >
         {{ navLink.title }}
       </li>
-      <li class="nav-link" @click="articlesStore.setShowSearchBar(true)">Search</li>
+      <li class="nav-link" @click="showSearchBar">Search</li>
     </ul>
   </nav>
 </template>
 
 <script setup lang="ts">
 import { useArticlesStore } from '@/stores/articles'
-import { navLinks } from '@/utils/navLinks'
+import { type NavLink, navLinks } from '@/utils/navLinks'
 import type { Filter } from '@/types/article'
+import { reactive } from 'vue'
 
 interface NavigationProps {
   inverted?: boolean
@@ -30,7 +31,16 @@ const props = withDefaults(defineProps<NavigationProps>(), {
   readonly: false
 })
 
+const state = reactive({
+  isInverted: { inverted: props.inverted },
+  isActive: (navLink: NavLink) => ({ active: articlesStore.filter === navLink.value })
+})
+
 const articlesStore = useArticlesStore()
+
+const showSearchBar = () => {
+  articlesStore.setShowSearchBar(true)
+}
 
 const setFilter = (value: Filter) => {
   if (!props.readonly) {

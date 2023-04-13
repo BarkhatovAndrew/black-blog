@@ -1,7 +1,8 @@
 <template>
   <div v-if="articlesStore.isLoading" class="articles-list">
-    <ArticleItemSkeleton v-for="(_, i) in 8" :key="i" />
+    <ArticleItemSkeleton v-for="(_, i) in 3" :key="i" />
   </div>
+
   <div v-else-if="articlesStore.filteredArticles.length" class="articles-list">
     <ArticleItem
       v-for="article in articlesStore.filteredArticles"
@@ -9,6 +10,7 @@
       :article="article"
     />
   </div>
+
   <div v-else class="not-found">
     <h3>Articles not found</h3>
     <img src="../assets/images/giphy.gif" alt="not-found" class="not-found-img" />

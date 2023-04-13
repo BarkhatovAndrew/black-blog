@@ -59,7 +59,7 @@
     background: var(--text-secondary-color);
   }
   50% {
-    background: #757575;
+    background: var(--skeleton-blink-color);
   }
   100% {
     background: var(--text-secondary-color);

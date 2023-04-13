@@ -64,7 +64,7 @@
     background: var(--text-secondary-color);
   }
   50% {
-    background: #6798ae;
+    background: var(--skeleton-blink-color);
   }
   100% {
     background: var(--text-secondary-color);

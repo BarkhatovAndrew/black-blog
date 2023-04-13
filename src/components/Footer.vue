@@ -1,12 +1,10 @@
 <template>
   <footer class="footer">
-    <a href="https://dribbble.com/shots/7033826-Developer-s-blog/" target="_blank" class="link"
-      >Inspired by Denis Danilov's design</a
-    >
+    <a href="https://dribbble.com/shots/7033826-Developer-s-blog/" target="_blank" class="link">
+      Inspired by Denis Danilov's design
+    </a>
   </footer>
 </template>
-
-<script setup lang="ts"></script>
 
 <style scoped>
 .footer {
@@ -28,7 +26,7 @@
   left: 0;
   width: 0;
   height: 5px;
-  background: #3e6d95;
+  background: var(--blue-color);
   transition: width 200ms ease;
 }
 

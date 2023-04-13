@@ -1,6 +1,6 @@
 import type { Filter } from '@/types/article'
 
-interface NavLink {
+export interface NavLink {
   id: number
   title: string
   value: Filter

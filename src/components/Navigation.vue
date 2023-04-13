@@ -6,7 +6,7 @@
         :key="navLink.id"
         class="nav-link"
         :class="{ active: articlesStore.filter === navLink.value }"
-        @click="articlesStore.setFilter(navLink.value)"
+        @click="setFilter(navLink.value)"
       >
         {{ navLink.title }}
       </li>
@@ -17,16 +17,25 @@
 <script setup lang="ts">
 import { useArticlesStore } from '@/stores/articles'
 import { navLinks } from '@/utils/navLinks'
+import type { Filter } from '@/types/article'
 
 interface NavigationProps {
   inverted?: boolean
+  readonly?: boolean
 }
 
-withDefaults(defineProps<NavigationProps>(), {
-  inverted: false
+const props = withDefaults(defineProps<NavigationProps>(), {
+  inverted: false,
+  readonly: false
 })
 
 const articlesStore = useArticlesStore()
+
+const setFilter = (value: Filter) => {
+  if (!props.readonly) {
+    articlesStore.setFilter(value)
+  }
+}
 </script>
 
 <style lang="scss" scoped>

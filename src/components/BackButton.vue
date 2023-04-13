@@ -11,6 +11,7 @@ const router = useRouter()
 <style scoped>
 .back-button {
   border: none;
+  white-space: nowrap;
   cursor: pointer;
   background: none;
   color: var(--text-color);

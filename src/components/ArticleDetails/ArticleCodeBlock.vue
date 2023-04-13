@@ -14,6 +14,7 @@ defineProps<ArticleTextBlockProps>()
 
 <style scoped>
 .code-block {
+  font-family: Source Code Pro, serif;
   background: var(--bg-color-code);
   padding: 15px 35px;
 }

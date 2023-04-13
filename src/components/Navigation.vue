@@ -10,6 +10,7 @@
       >
         {{ navLink.title }}
       </li>
+      <li class="nav-link" @click="articlesStore.setShowSearchBar(true)">Search</li>
     </ul>
   </nav>
 </template>

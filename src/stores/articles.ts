@@ -11,7 +11,9 @@ interface ArticlesStoreState {
   articles: Article[]
   currentArticle?: Article
   filter: Filter
+  search: string
   isLoading: boolean
+  showSearchBar: boolean
   error?: string
 }
 
@@ -20,6 +22,8 @@ export const useArticlesStore = defineStore('articles', {
     articles: [],
     filter: 'ALL',
     currentArticle: undefined,
+    search: '',
+    showSearchBar: false,
     error: undefined,
     isLoading: false
   }),
@@ -29,13 +33,23 @@ export const useArticlesStore = defineStore('articles', {
       this.filter = value
     },
 
+    setSearch(value: string) {
+      this.search = value
+    },
+
+    setShowSearchBar(value: boolean) {
+      this.showSearchBar = value
+    },
+
     async getArticles() {
       this.isLoading = true
       this.error = undefined
 
       try {
         const [articlesResponse, tagsResponse] = await Promise.all([
-          axiosInstance.get<Article[]>('/articles'),
+          axiosInstance.get<Article[]>(
+            this.search ? '/articles?title_like=' + this.search : '/articles'
+          ),
           axiosInstance.get<Tag[]>('/tags')
         ])
 

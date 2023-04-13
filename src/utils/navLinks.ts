@@ -31,10 +31,5 @@ export const navLinks: NavLink[] = [
     id: 5,
     title: 'Tutorials',
     value: 'TUTORIAL'
-  },
-  {
-    id: 6,
-    title: 'Search',
-    value: 'SEARCH'
   }
 ]

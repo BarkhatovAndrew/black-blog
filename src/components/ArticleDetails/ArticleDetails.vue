@@ -6,7 +6,7 @@
     <div class="article">
       <ShareIcons />
       <ArticleDetailsSkeleton v-if="articlesStore.isLoading" />
-      <div v-if="articlesStore.currentArticle" class="content">
+      <div v-else-if="articlesStore.currentArticle" class="content">
         <span class="tag" :style="{ color }">{{ articlesStore.currentArticle?.tag }}</span>
         <span class="date">{{ articlesStore.currentArticle?.createdAt }}</span>
         <h1 class="title">{{ articlesStore.currentArticle?.title }}</h1>

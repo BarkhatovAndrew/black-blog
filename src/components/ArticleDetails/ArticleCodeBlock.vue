@@ -1,5 +1,5 @@
 <template>
-  <pre class="code-block"><code>{{ block.code }}</code></pre>
+  <pre class="code-block"><highlightjs autodetect :code="block.code" /></pre>
 </template>
 
 <script setup lang="ts">

@@ -38,8 +38,8 @@ import ArticleTextBlock from '@/components/ArticleDetails/ArticleTextBlock.vue'
 import ArticleCodeBlock from '@/components/ArticleDetails/ArticleCodeBlock.vue'
 import ArticleImageBlock from '@/components/ArticleDetails/ArticleImageBlock.vue'
 import { tagColorMap } from '@/utils/tagColorMap'
-import type { TagType } from '@/types/article'
 import { throttle } from '@/utils/throttle'
+import type { TagType } from '@/types/article'
 
 const route = useRoute()
 const articlesStore = useArticlesStore()

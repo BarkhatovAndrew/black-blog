@@ -1,16 +1,12 @@
 <template>
-  <p v-if="articlesStore.isLoading">Loading...</p>
   <div class="container">
     <div class="article-back-block" ref="divRef" @mouseenter="throttledSetBackButtonPosition">
       <BackButton class="back-button" :style="{ left: state.backButtonPosition }" />
     </div>
-    <div v-if="articlesStore.currentArticle" class="article">
-      <ul class="share-icons">
-        <TwitterIcon class="icon" />
-        <FacebookIcon class="icon" />
-        <LinkedInIcon class="icon" />
-      </ul>
-      <div class="content">
+    <div class="article">
+      <ShareIcons />
+      <ArticleDetailsSkeleton v-if="articlesStore.isLoading" />
+      <div v-if="articlesStore.currentArticle" class="content">
         <span class="tag" :style="{ color }">{{ articlesStore.currentArticle?.tag }}</span>
         <span class="date">{{ articlesStore.currentArticle?.createdAt }}</span>
         <h1 class="title">{{ articlesStore.currentArticle?.title }}</h1>
@@ -29,17 +25,17 @@
 import { computed, onMounted, reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useArticlesStore } from '@/stores/articles'
-import FacebookIcon from '@/assets/icons/facebook.svg'
-import LinkedInIcon from '@/assets/icons/linkedin.svg'
-import TwitterIcon from '@/assets/icons/twitter.svg'
 import BackButton from '@/components/BackButton.vue'
 import Navigation from '@/components/Navigation.vue'
-import ArticleTextBlock from '@/components/ArticleDetails/ArticleTextBlock.vue'
-import ArticleCodeBlock from '@/components/ArticleDetails/ArticleCodeBlock.vue'
-import ArticleImageBlock from '@/components/ArticleDetails/ArticleImageBlock.vue'
+import ShareIcons from '@/components/ShareIcons.vue'
 import { tagColorMap } from '@/utils/tagColorMap'
 import { throttle } from '@/utils/throttle'
 import type { TagType } from '@/types/article'
+
+import ArticleTextBlock from './ArticleTextBlock.vue'
+import ArticleCodeBlock from './ArticleCodeBlock.vue'
+import ArticleImageBlock from './ArticleImageBlock.vue'
+import ArticleDetailsSkeleton from '@/components/ArticleDetails/ArticleDetailsSkeleton.vue'
 
 const route = useRoute()
 const articlesStore = useArticlesStore()
@@ -83,13 +79,6 @@ onMounted(() => {
   height: 40px;
 }
 
-.share-icons {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-}
-
 .content {
   width: 600px;
 }
@@ -102,18 +91,6 @@ onMounted(() => {
   font-size: 44px;
   margin-top: 20px;
   margin-bottom: 0;
-}
-
-.icon {
-  cursor: pointer;
-  width: 30px;
-  fill: #999;
-  transition: 100ms;
-  margin-bottom: 5px;
-}
-
-.icon:hover {
-  fill: var(--bg-color);
 }
 
 .back-button {

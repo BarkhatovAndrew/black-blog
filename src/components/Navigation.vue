@@ -65,12 +65,8 @@ const setFilter = (value: Filter) => {
 
 .inverted {
   .nav-link {
+    cursor: default;
     box-shadow: inset 0 0 0 0 var(--bg-color);
-  }
-
-  .nav-link:hover {
-    box-shadow: inset 100px 0 0 0 var(--text-color-inverted);
-    color: var(--bg-color-inverted);
   }
 
   .active {

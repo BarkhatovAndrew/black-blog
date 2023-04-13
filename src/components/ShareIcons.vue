@@ -7,9 +7,9 @@
 </template>
 
 <script setup lang="ts">
-import FacebookIcon from '@/assets/icons/facebook.svg'
-import TwitterIcon from '@/assets/icons/twitter.svg'
-import LinkedInIcon from '@/assets/icons/linkedin.svg'
+import FacebookIcon from '@/assets/icons/facebook.svg?component'
+import TwitterIcon from '@/assets/icons/twitter.svg?component'
+import LinkedInIcon from '@/assets/icons/linkedin.svg?component'
 </script>
 
 <style scoped>

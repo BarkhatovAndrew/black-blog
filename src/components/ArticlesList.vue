@@ -1,6 +1,6 @@
 <template>
   <div v-if="articlesStore.isLoading" class="articles-list">
-    <ArticleItemSkeleton v-for="(_, i) in 3" :key="i" />
+    <ArticleItemSkeleton v-for="(_, i) in 4" :key="i" />
   </div>
 
   <div v-else-if="articlesStore.filteredArticles.length" class="articles-list">

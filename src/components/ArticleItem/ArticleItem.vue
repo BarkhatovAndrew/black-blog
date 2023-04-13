@@ -1,5 +1,5 @@
 <template>
-  <RouterLink :to="/article/ + props.article.id" class="article-item">
+  <RouterLink :to="'/article/' + props.article.id" class="article-item">
     <div class="info">
       <p :style="{ color }" class="tag">{{ props.article.tag }}</p>
       <p class="date">{{ props.article.createdAt }}</p>

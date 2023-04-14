@@ -28,13 +28,18 @@ const color = computed(() => tagColorMap[props.article.tag as TagType])
   position: relative;
   border: 0.5px solid var(--border-article-color);
   outline: 0.5px solid var(--border-article-color);
-  width: 298px;
-  height: 298px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 30px;
   transition: scale 100ms;
+}
+
+.article-item:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
 }
 
 .article-item:hover {

@@ -20,15 +20,14 @@ import { useArticlesStore } from '@/stores/articles'
 import { type NavLink, navLinks } from '@/utils/navLinks'
 import type { Filter } from '@/types/article'
 import { reactive } from 'vue'
+import { useRouter } from 'vue-router'
 
 interface NavigationProps {
   inverted?: boolean
-  readonly?: boolean
 }
 
 const props = withDefaults(defineProps<NavigationProps>(), {
-  inverted: false,
-  readonly: false
+  inverted: false
 })
 
 const state = reactive({
@@ -37,14 +36,16 @@ const state = reactive({
 })
 
 const articlesStore = useArticlesStore()
+const router = useRouter()
 
 const showSearchBar = () => {
   articlesStore.setShowSearchBar(true)
 }
 
 const setFilter = (value: Filter) => {
-  if (!props.readonly) {
-    articlesStore.setFilter(value)
+  articlesStore.setFilter(value)
+  if (props.inverted) {
+    router.back()
   }
 }
 </script>
@@ -76,8 +77,12 @@ const setFilter = (value: Filter) => {
 
 .inverted {
   .nav-link {
-    cursor: default;
     box-shadow: inset 0 0 0 0 var(--bg-color);
+  }
+
+  .nav-link:hover {
+    box-shadow: inset 100px 0 0 0 var(--text-color-inverted);
+    color: var(--bg-color-inverted);
   }
 
   .active {

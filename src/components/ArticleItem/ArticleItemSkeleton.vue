@@ -18,8 +18,7 @@
   flex-direction: column;
   border: 0.5px solid var(--border-article-color);
   outline: 0.5px solid var(--border-article-color);
-  width: 298px;
-  height: 298px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;

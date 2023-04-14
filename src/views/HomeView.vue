@@ -25,6 +25,8 @@ const debounceInitArticlesSearch = debounce((value: string) => {
 
 const closeSearchBar = () => {
   articlesStore.setShowSearchBar(false)
+  articlesStore.setSearch('')
+  articlesStore.getArticles()
 }
 </script>
 

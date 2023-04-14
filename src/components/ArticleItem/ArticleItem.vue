@@ -22,7 +22,7 @@ const props = defineProps<ArticleItemProps>()
 const color = computed(() => tagColorMap[props.article.tag as TagType])
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .article-item {
   cursor: pointer;
   position: relative;
@@ -52,6 +52,12 @@ const color = computed(() => tagColorMap[props.article.tag as TagType])
   position: absolute;
   top: 16px;
   left: 16px;
+
+  @media (max-width: 1200px) {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .tag {
@@ -66,6 +72,10 @@ const color = computed(() => tagColorMap[props.article.tag as TagType])
 }
 
 .title {
-  font-size: 22px;
+  font-size: 2.2rem;
+
+  @media (max-width: 1200px) {
+    font-size: 1.8rem;
+  }
 }
 </style>

@@ -13,30 +13,64 @@
 import Navigation from '@/components/Navigation.vue'
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 50px 0;
+  padding: 5rem 0;
   align-items: center;
-  height: 330px;
+  height: 33rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 1000px) {
+    padding: 2rem 0 5rem;
+  }
+
+  @media (max-width: 870px) {
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 800px) {
+    height: fit-content;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 .header-img {
   height: 100%;
+
+  @media (max-width: 1000px) {
+    object-fit: contain;
+  }
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 }
 
 .header-title {
-  width: 300px;
-  font-size: 82px;
+  font-size: 8.2rem;
   margin: 0;
   text-shadow: 2px 0 0 #ce5937, 0 2px 0 #5599d4, 0 -2px 0 #c4ad51;
+
+  @media (max-width: 1200px) {
+    font-size: 6.6rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 5rem;
+  }
 }
 
 .header-subtitle {
   color: var(--text-secondary-color);
   margin: 0;
-  font-size: 20px;
+  font-size: 2rem;
+
+  @media (max-width: 630px) {
+    display: none;
+  }
 }
 
 .title-block {
@@ -46,6 +80,19 @@ import Navigation from '@/components/Navigation.vue'
   justify-content: space-between;
   align-self: flex-start;
   height: 100%;
-  margin-left: 48px;
+  margin: 0 4.8rem;
+  max-width: 70rem;
+
+  @media (max-width: 1200px) {
+    margin: 0 3rem;
+  }
+
+  @media (max-width: 1000px) {
+    margin-right: 0;
+  }
+
+  @media (max-width: 800px) {
+    margin: 0;
+  }
 }
 </style>

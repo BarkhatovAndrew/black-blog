@@ -10,6 +10,11 @@ html {
   font-family: 'Source Code Pro', monospace;
   background: var(--bg-color);
   color: var(--text-color);
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
 }
 
 a {
@@ -19,6 +24,13 @@ a {
 
 #app {
   margin: 0 auto;
-  width: 1200px;
+  width: 80%;
+  max-width: 1200px;
+}
+
+@media (max-width: 1000px) {
+  #app {
+    width: 95%;
+  }
 }
 

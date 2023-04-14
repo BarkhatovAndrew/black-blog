@@ -1,5 +1,5 @@
 <template>
-  <nav role="navigation" :class="state.isInverted">
+  <nav role="navigation" :class="state.isInverted" class="navigation">
     <ul class="nav-list">
       <li
         class="nav-link"
@@ -51,17 +51,35 @@ const setFilter = (value: Filter) => {
 </script>
 
 <style lang="scss" scoped>
+.navigation {
+  @media (max-width: 870px) {
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
+
 .nav-list {
   padding-left: 0;
   margin: 0;
   list-style: none;
   line-height: 36px;
+
+  @media (max-width: 870px) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .nav-link {
   cursor: pointer;
   box-shadow: inset 0 0 0 0 var(--bg-color-inverted);
   transition: 150ms;
+
+  @media (max-width: 870px) {
+    margin: 0 10px;
+  }
 }
 
 .nav-link:hover {

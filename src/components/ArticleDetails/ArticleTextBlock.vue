@@ -1,5 +1,5 @@
 <template>
-  <h2 v-if="block.title">{{ block.title }}</h2>
+  <h2 v-if="block.title" class="title">{{ block.title }}</h2>
   <p class="text">{{ block.text }}</p>
 </template>
 
@@ -13,10 +13,13 @@ interface ArticleTextBlockProps {
 defineProps<ArticleTextBlockProps>()
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .text {
   font-family: 'Open Sans', serif;
   line-height: 24px;
   color: var(--text-color-inverted);
+}
+
+.title {
 }
 </style>

@@ -17,7 +17,7 @@ import LinkedInIcon from '@/assets/icons/linkedin.svg?component'
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: 0;
+  margin-right: 3rem;
 }
 
 .icon {

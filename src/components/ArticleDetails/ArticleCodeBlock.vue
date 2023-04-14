@@ -12,10 +12,14 @@ interface ArticleTextBlockProps {
 defineProps<ArticleTextBlockProps>()
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .code-block {
   font-family: Source Code Pro, serif;
   background: var(--bg-color-code);
   padding: 15px 35px;
+
+  @media (max-width: 500px) {
+    padding: 0;
+  }
 }
 </style>

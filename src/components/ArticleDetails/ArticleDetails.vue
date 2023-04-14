@@ -4,7 +4,7 @@
       <BackButton class="back-button" :style="{ left: state.backButtonPosition }" />
     </div>
     <div class="article">
-      <ShareIcons />
+      <ShareIcons class="share-icons" />
       <ArticleDetailsSkeleton v-if="articlesStore.isLoading" />
       <div v-else-if="articlesStore.currentArticle" class="content">
         <span class="tag" :style="{ color }">{{ articlesStore.currentArticle?.tag }}</span>
@@ -61,7 +61,7 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   position: relative;
 }
@@ -73,6 +73,14 @@ onMounted(() => {
   justify-content: space-between;
   background: var(--bg-color-inverted);
   color: var(--text-color-inverted);
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 600px) {
+    padding: 1rem;
+  }
 }
 
 .article-back-block {
@@ -80,7 +88,12 @@ onMounted(() => {
 }
 
 .content {
-  width: 600px;
+  max-width: 600px;
+  margin-right: 3rem;
+
+  @media (max-width: 900px) {
+    order: 3;
+  }
 }
 
 .tag {
@@ -98,5 +111,26 @@ onMounted(() => {
   top: 8px;
   left: 0;
   transition: 600ms ease;
+}
+
+.nav {
+  @media (max-width: 900px) {
+    order: 1;
+    margin-top: 0;
+  }
+}
+
+.share-icons {
+  @media (max-width: 900px) {
+    flex-direction: row;
+    order: 2;
+    margin: 0 0 1rem auto;
+  }
+}
+
+.title {
+  @media (max-width: 600px) {
+    font-size: 3rem;
+  }
 }
 </style>
